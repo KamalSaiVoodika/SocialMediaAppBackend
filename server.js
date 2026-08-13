@@ -18,6 +18,10 @@ connectDB();
 app.use(express.json());
 app.use('/api/auth', authRouter);
 
+app.get('/', (req, res, next)=>{
+    res.send('Welcome to my server');
+});
+
 app.listen(PORT, "0.0.0.0", function () {
     console.log(`Server is running on port ${PORT}`);
 });
